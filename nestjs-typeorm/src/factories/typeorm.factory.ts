@@ -14,6 +14,5 @@ export function typeORMFactory(
     migrations: [migrationsPath],
   };
 
-  console.log(config);
   return config;
 }
