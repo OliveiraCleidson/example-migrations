@@ -20,6 +20,8 @@ async function bootstrap() {
 }
 
 async function runMigrations(app: INestApplication) {
+  if (process.env.MIGRATIONS_RUN_ON_STARTUP !== 'true') return;
+
   const logger = new Logger('Migrations');
   const datasource = app.get<DataSource>(DataSource);
   if (!datasource) {

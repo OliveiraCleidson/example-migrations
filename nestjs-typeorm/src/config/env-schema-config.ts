@@ -5,6 +5,7 @@ export interface ApplicationVariables {
   PORT: number;
 
   DB_PATH: string;
+  MIGRATIONS_RUN_ON_STARTUP: boolean;
 }
 
 export const EnvSchemaConfig = Joi.object<ApplicationVariables>({
@@ -12,4 +13,5 @@ export const EnvSchemaConfig = Joi.object<ApplicationVariables>({
   PORT: Joi.number().required(),
 
   DB_PATH: Joi.string().required(),
+  MIGRATIONS_RUN_ON_STARTUP: Joi.boolean().required(),
 });
