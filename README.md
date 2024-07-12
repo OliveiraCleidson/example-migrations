@@ -56,6 +56,6 @@ Advantages:
 Disadvantages:
 - Requires a manual step or the configuration of automation to execute the migrations.
 
-### Operação
+### Operation
 
 To exemplify these two types of migrations, check the script in the package.json called `migrations:run` for the script migration scenario. For the startup migration scenario, just change the value of the environment variable `MIGRATIONS_RUN_ON_STARTUP` to true and check the code in the `main.ts` file.
